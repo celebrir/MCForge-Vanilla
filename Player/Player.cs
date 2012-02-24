@@ -2317,6 +2317,7 @@ return;
                 if (cmd.ToLower() == "care") { SendMessage("Dmitchell94 now loves you with all his heart."); return; }
                 if (cmd.ToLower() == "facepalm") { SendMessage("Fenderrock87's bot army just simultaneously facepalm'd at your use of this command."); return; }
                 if (cmd.ToLower() == "alpaca") { SendMessage("Leitrean's Alpaca Army just raped your woman and pillaged your villages!"); return; }
+                if (cmd.ToLower() == "love") { SendMessage("Celebrir is now loving you, like he used to love Fluttershy."); return; }
                 //DO NOT REMOVE THE TWO COMMANDS BELOW, /PONY AND /RAINBOWDASHLIKESCOOLTHINGS. -EricKilla
                 if (cmd.ToLower() == "pony")
                 {
@@ -2710,44 +2711,108 @@ else goto retry;
             }
 
             byte[] stored = new byte[1];
-
+            
             stored[0] = (byte)1;
             sb.Replace("(darksmile)", enc.GetString(stored));
+            sb.Replace("(1)", enc.GetString(stored));
             stored[0] = (byte)2;
             sb.Replace("(smile)", enc.GetString(stored));
+            sb.Replace("(2)", enc.GetString(stored));
             stored[0] = (byte)3;
             sb.Replace("(heart)", enc.GetString(stored));
+            sb.Replace("(3)", enc.GetString(stored));
             stored[0] = (byte)4;
             sb.Replace("(diamond)", enc.GetString(stored));
+            sb.Replace("(4)", enc.GetString(stored));
+            stored[0] = (byte)5;
+            sb.Replace("(clubs)", enc.GetString(stored));
+            sb.Replace("(5)", enc.GetString(stored));
+            stored[0] = (byte)6;
+            sb.Replace("(spades)", enc.GetString(stored));
+            sb.Replace("(6)", enc.GetString(stored));
             stored[0] = (byte)7;
             sb.Replace("(bullet)", enc.GetString(stored));
+            sb.Replace("(7)", enc.GetString(stored));
             stored[0] = (byte)8;
             sb.Replace("(hole)", enc.GetString(stored));
+            sb.Replace("(8)", enc.GetString(stored));
+            stored[0] = (byte)9;
+            sb.Replace("(ring)", enc.GetString(stored));
+            sb.Replace("(9)", enc.GetString(stored));
+            stored[0] = (byte)10;
+            sb.Replace("(xring)", enc.GetString(stored));
+            sb.Replace("(10)", enc.GetString(stored));
             stored[0] = (byte)11;
             sb.Replace("(male)", enc.GetString(stored));
+            sb.Replace("(11)", enc.GetString(stored));
             stored[0] = (byte)12;
             sb.Replace("(female)", enc.GetString(stored));
+            sb.Replace("(12)", enc.GetString(stored));
+            stored[0] = (byte)13;
+            sb.Replace("(note)", enc.GetString(stored));
+            sb.Replace("(13)", enc.GetString(stored));
+            stored[0] = (byte)14;
+            sb.Replace("(note2)", enc.GetString(stored));
+            sb.Replace("(14)", enc.GetString(stored));
             stored[0] = (byte)15;
             sb.Replace("(sun)", enc.GetString(stored));
+            sb.Replace("(15)", enc.GetString(stored));
             stored[0] = (byte)16;
             sb.Replace("(right)", enc.GetString(stored));
+            sb.Replace("(16)", enc.GetString(stored));
             stored[0] = (byte)17;
-            sb.Replace("(left)", enc.GetString(stored));
+            sb.Replace("(left)", enc.GetString(stored))a;
+            sb.Replace("(17)", enc.GetString(stored));
+            stored[0] = (byte)18;
+            sb.Replace("(updown)", enc.GetString(stored));
+            sb.Replace("(18)", enc.GetString(stored));
             stored[0] = (byte)19;
             sb.Replace("(double)", enc.GetString(stored));
+            sb.Replace("(19)", enc.GetString(stored));
+    		stored[0] = (byte)20;
+            sb.Replace("(pilcrow)", enc.GetString(stored));
+            sb.Replace("(20)", enc.GetString(stored));
+			stored[0] = (byte)21;
+            sb.Replace("(section)", enc.GetString(stored));
+            sb.Replace("(21)", enc.GetString(stored));
             stored[0] = (byte)22;
             sb.Replace("(half)", enc.GetString(stored));
+            sb.Replace("(22)", enc.GetString(stored));
+			stored[0] = (byte)23;
+            sb.Replace("(updown)", enc.GetString(stored));
+            sb.Replace("(23)", enc.GetString(stored));
             stored[0] = (byte)24;
             sb.Replace("(uparrow)", enc.GetString(stored));
+            sb.Replace("(27)", enc.GetString(stored));
             stored[0] = (byte)25;
             sb.Replace("(downarrow)", enc.GetString(stored));
+            sb.Replace("(25)", enc.GetString(stored));
             stored[0] = (byte)26;
             sb.Replace("(rightarrow)", enc.GetString(stored));
+            sb.Replace("(26)", enc.GetString(stored));
+			stored[0] = (byte)27;
+            sb.Replace("(leftarrow)", enc.GetString(stored));
+            sb.Replace("(27)", enc.GetString(stored));
+			stored[0] = (byte)28;
+            sb.Replace("(L_)", enc.GetString(stored));
+            sb.Replace("(28)", enc.GetString(stored));
+			stored[0] = (byte)29;
+            sb.Replace("(leftrightrarrow)", enc.GetString(stored));
+            sb.Replace("(lrarrow)", enc.GetString(stored));
+            sb.Replace("(29)", enc.GetString(stored));
             stored[0] = (byte)30;
             sb.Replace("(up)", enc.GetString(stored));
+            sb.Replace("(30)", enc.GetString(stored));
             stored[0] = (byte)31;
             sb.Replace("(down)", enc.GetString(stored));
-
+            sb.Replace("(31)", enc.GetString(stored));
+            stored[0] = (byte)38;
+            sb.Replace("(and)", enc.GetString(stored));
+            sb.Replace("(38)", enc.GetString(stored));
+            stored[0] = (byte)127;
+            sb.Replace("(house)", enc.GetString(stored));
+            sb.Replace("(127)", enc.GetString(stored));
+            
             message = sb.ToString();
             int totalTries = 0;
             if (MessageRecieve != null)
