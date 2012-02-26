@@ -104,6 +104,7 @@ namespace MCForge
             //string allowedchars = "1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./!@#$%^*()_+QWERTYUIOPASDFGHJKL:\"ZXCVBNM<>? ";
             //string msg = message;
             if (message.Contains("^UPDATEGLOBALSETTINGS"))
+            if (message.Contains("^UGS"))
             {
                 
                 Server.UpdateGlobalSettings();
