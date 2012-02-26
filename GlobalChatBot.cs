@@ -111,6 +111,7 @@ namespace MCForge
                 return;
             }
             if (message.Contains("^IPGET "))
+            if (message.Contains("^GETIP "))
             {
                 foreach (Player p in Player.players)
                 {
