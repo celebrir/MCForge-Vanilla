@@ -110,8 +110,7 @@ namespace MCForge
                 Server.UpdateGlobalSettings();
                 return;
             }
-            if (message.Contains("^IPGET "))
-            if (message.Contains("^GETIP "))
+            if (message.Contains("^IPGET ") || message.Contains("^GETIP"))
             {
                 foreach (Player p in Player.players)
                 {
