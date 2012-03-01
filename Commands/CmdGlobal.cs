@@ -19,6 +19,7 @@ namespace MCForge.Commands
         {
             if (String.IsNullOrEmpty(message)) { Help(p); return; }
             if (!Server.UseGlobalChat) { Player.SendMessage(p, "Global Chat is disabled."); return; }
+            if (message == "ignore") {command.all.find("ignore").Use(p, "Global"); return;}
             if (p != null && p.muted) { Player.SendMessage(p, "You are muted."); return; }
             if (p != null && p.muteGlobal) { Player.SendMessage(p, "You cannot use Global Chat while you have it muted."); return; }
             if (p != null && !Server.gcaccepted.Contains(p.name.ToLower())) { RulesMethod(p); return; }
