@@ -41,7 +41,12 @@ namespace MCForge.Commands
                         return;
                     }
                 }
-            }            Server.GlobalChat.Say((p != null ? p.name + ": " : "Console: ") + message, p);
+            }
+            if (message.Contains.ToLower("shut up"))
+            {
+            Player.SendMessage(p, "&dYou can &a/ignore global &d us, if you don't like to hear us.");
+            }
+            Server.GlobalChat.Say((p != null ? p.name + ": " : "Console: ") + message, p);
             Player.GlobalMessage(Server.GlobalChatColor + "<[Global] " + (p != null ? p.name + ": " : "Console: ") + "&f" + (Server.profanityFilter ? ProfanityFilter.Parse(message) : message), true);
 
         }
